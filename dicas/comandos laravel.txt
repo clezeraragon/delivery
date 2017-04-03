@@ -1,0 +1,14 @@
+######comandos basicos artisan #######
+
+comando para mudar o namespace :
+php artisan app:name Clezer
+
+comando para criar model:
+php artisan make:model clezer
+
+comando para criar controller:
+php artisna make:controller ClezerController
+
+comando para zerar todos os migrates e seeds
+php artisan migrate:refresh --seed
+-----------------------------------------------------------------------------

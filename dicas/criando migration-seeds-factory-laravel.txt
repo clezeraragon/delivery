@@ -1,0 +1,23 @@
+comando para criar migration:
+php artisan make:migration create_categories_table --create=categories
+* obs: para criar um migrate o nome do arquivo precisa ser no 
+  plural para referenciar uma tabela que está no singular.
+ categories => category(table)
+
+* apos criar as migrations precisamos criar nossa factory para 
+  inserir dados falsos ou verdadeiros na nossa tabela.
+
+Abrir a pasta factories e duplicar suas linhas e configurar de acordo.
+* apos criar as seeds:
+ php artisan make:seed ClezerTableSeeder
+
+Abrir o arquivo ClezerTableSeeder e fazer a chamada da factory ex: 
+public function run()
+    {
+        factory(Category::class,10)->create(); // vai criar 10 registros
+    }
+apos configurar o ClezerTableSeeder abri o DatabaseSeeder e realizar a chamada do nosso seeder ex:
+$this->call(ClezerTableSeeder::class);
+
+Realizado tudo rodar o comando :
+php artisan db:seed

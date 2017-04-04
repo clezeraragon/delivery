@@ -29,4 +29,6 @@ Para acessar o Admin :
 user: admin@admin.com
 password: admin
 
-#####################################################################################################################
+## Observações
+
+Projeto em fase de desenvolvimento.

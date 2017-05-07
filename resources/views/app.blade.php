@@ -28,7 +28,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+				<a class="navbar-brand" href="#">Sistema de Entregas</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar">
@@ -39,7 +39,7 @@
 					<li><a href="{{route('admin.products.index')}}">Produtos</a></li>
 				</ul>
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Welcome</a></li>
+					<li><a href="{{ route('admin.clients.index') }}">Clientes</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					@if(auth()->guest())

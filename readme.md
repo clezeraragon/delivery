@@ -9,18 +9,26 @@
 Este projeto comtempla se tornar uma API para gerenciamento completo de uma empresa Delivery com a criação de usuários e pedidos para ser consumidos atravez de um
 Aplicativo Mobile.
 
-## Official Documentation
+## Instalação :
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Para instalar esse projeto basta apenas digitar os comandos na ordem:
 
-## Contributing
+1 - cp .env.example .env
+2 - php artisan key:generate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
+## Migrations e seeds
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Esse projeto já contém a modelagem do banco de dados para fins funcionais, para isso basta rodar o seguinte comando:
 
-### License
+3 - php artisan migration:refresh --seed
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## Usuários Padrões
+
+Para acessar o Admin :
+user: admin@admin.com
+password: admin
+
+## Observações
+
+Projeto em fase de desenvolvimento.

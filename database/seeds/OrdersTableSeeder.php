@@ -1,9 +1,10 @@
 <?php
 
-use CodeDelivery\Models\Category;
 use Illuminate\Database\Seeder;
-
-class ProductTableSeeder extends Seeder
+use CodeDelivery\Models\Client;
+use CodeDelivery\Models\User;
+use CodeDelivery\Models\Order;
+class OrdersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,5 @@ class ProductTableSeeder extends Seeder
     public function run()
     {
 
-//        factory(Product::class,30)->create();
     }
 }

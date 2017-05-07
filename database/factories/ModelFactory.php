@@ -14,6 +14,8 @@
 use CodeDelivery\Models\Category;
 use CodeDelivery\Models\Client;
 use CodeDelivery\Models\Product;
+use CodeDelivery\Models\Order;
+use CodeDelivery\Models\OrderItem;
 
 $factory->define(CodeDelivery\Models\User::class, function (Faker\Generator $faker) {
     return [
@@ -50,6 +52,24 @@ $factory->define(Client::class,function (Faker\Generator $faker){
         'city'=> $faker->city,
         'state'=> $faker->state,
         'zipcode'=> $faker->postcode
+
+    ];
+});
+$factory->define(Order::class,function (Faker\Generator $faker){
+
+    return  [
+        'total' => rand(50,100),
+        'status'=> 0,
+
+    ];
+});
+$factory->define(OrderItem::class,function (Faker\Generator $faker){
+
+    return  [
+        'product_id' => rand(1,10),
+        'order_id' => rand(1,10),
+        'price' => rand(10,100),
+        'qtd' => rand(1,10),
 
     ];
 });

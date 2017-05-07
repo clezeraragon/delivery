@@ -3,6 +3,7 @@
 use CodeDelivery\Models\User;
 use Illuminate\Database\Seeder;
 use CodeDelivery\Models\Client;
+use CodeDelivery\Models\Order;
 
 class UserTableSeeder extends Seeder
 {
@@ -29,6 +30,8 @@ class UserTableSeeder extends Seeder
         factory(User::class,10)->create()->each(
             function ($user){
                 factory(Client::class)->create(['user_id' => $user->id]);
+                factory(Order::class)->create(['user_delivery_id' => $user->id,'client_id'=> $user->id ]);
+
             }
         );
     }

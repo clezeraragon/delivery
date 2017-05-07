@@ -2,6 +2,7 @@
 
 use CodeDelivery\Models\Category;
 use Illuminate\Database\Seeder;
+use CodeDelivery\Models\Product;
 
 class CategoryTableSeeder extends Seeder
 {
@@ -12,6 +13,12 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Category::class,10)->create();
+        // insert relacional tabela produto e categoria
+
+        factory(Category::class,30)->create()->each(
+            function ($category){
+                factory(Product::class)->create(['category_id' => $category->id]);
+            }
+        );
     }
 }

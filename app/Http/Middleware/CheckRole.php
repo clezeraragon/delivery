@@ -23,7 +23,7 @@ class CheckRole
         }
         if(Auth::user()->role <> 'admin')
         {
-            return redirect('home');
+            return redirect('home')->with('success', 'você não tem permissão para acessar essa pagina');
         }
         return $next($request);
     }
